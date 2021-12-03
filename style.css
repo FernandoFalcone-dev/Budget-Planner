@@ -1,0 +1,21 @@
+h2, p {
+    margin: 10px 0;
+}
+header {
+    margin-bottom: 40px;
+}
+.d3-tip{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+.d3-tip .name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: rgb(247, 247, 133);
+}
+.d3-tip .delete{
+    color: hotpink;
+    font-size: 0.8em;
+}

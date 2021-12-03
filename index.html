@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/bumbeishvili/d3-tip-for-v6@4/d3-tip.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Budget Planner</title>
+</head>
+<body class="indigo">
+    
+    <header class="indigo darken-1 section">
+        <h2 class="center white-text">Budget Planner</h2>
+        <p class="flow-text grey-text center text-lighten-2">Monthly money tracker</p>
+    </header>
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s12 m6">
+                <form class="card z-depth-0">
+                    <div class="card-content">
+                        <span class="card-title indigo-text">Add item:</span>
+                        <div class="input-field">
+                            <input type="text" id="name" autocomplete="off">
+                            <label for="name">Item Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="cost" autocomplete="off">
+                            <label for="name">Item Cost (R$)</label>
+                        </div>
+                        <div class="input-field center">
+                            <button class="btn-large pink white-text">Add item</button>
+                        </div>
+                        <div class="input-field center">
+                            <p class="red-text" id="error"></p>
+                        </div>  
+                    </div>
+                </form>
+            </div>
+            <div class="col s12 m5 push-m1">
+                <div class="canvas"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyChBCIcfqNoCDxxSKUeg0VGrNvD6bxF3hE",
+          authDomain: "udemy-d3-firebase-7fed4.firebaseapp.com",
+          projectId: "udemy-d3-firebase-7fed4",
+          storageBucket: "udemy-d3-firebase-7fed4.appspot.com",
+          messagingSenderId: "209344112292",
+          appId: "1:209344112292:web:8ce9f71fc9728adc94e831",
+          measurementId: "G-P0Q8GQJPZL"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+      </script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" integrity="sha512-wNH6xsp2n8CfB91nrBtfc4sfLwYPBMjSWVUwQOp60AYYXH6i8yCwuKFZ4rgK2i6pQek/b+bSyR7b01/922IBzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>
